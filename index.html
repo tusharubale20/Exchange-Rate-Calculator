@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/png" href="image/inr.jpg"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <title>Exchange Rate Calculator</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>Exchange Rate Calculator</h1>
+            </div>
+            <div class="instruction">
+                Choose the currency and the amount to get the exchange rate
+            </div>
+            <div class="currency">
+                <!-- For the main currency to be exchanged -->
+   
+                <select class="form-control label" id="primaryCurrency">
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CNY">CNY</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF">HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR">INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY" selected>JPY</option>,
+                    <option value="KRW">KRW</option>,
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PLN">PLN</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="USD">USD</option>
+                    <option value="ZAR">"ZAR</option>
+                </select>
+
+                <input type="number" id="primaryCurrencyValue" placeholder="1" value="1" class="currency-value form-control">
+            </div>
+
+            <div class="swap-rate-container">
+                <button class="btn swap-button" id="swapButton">
+                    Swap currency&nbsp;
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+                <div class="rate" id="rate"></div>
+            </div>
+
+            <div class="currency">
+                <!-- For the currency to be exchanged with -->
+               
+                <select class="form-control label" id="secondaryCurrency">
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CNY">CNY</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF">HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR" selected>INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY">JPY</option>,
+                    <option value="KRW">KRW</option>,
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PLN">PLN</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="USD">USD</option>
+                    <option value="ZAR">"ZAR</option>
+                </select>
+
+                <input type="number" id="secondaryCurrencyValue" disabled placeholder="1" value="1" class="currency-value form-control">
+            </div>
+            <div id="date" class="date"></div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
